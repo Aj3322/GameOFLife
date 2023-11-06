@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/img">
+    <!-- Title Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/splash_background"
+        app:subtitleTextColor="@color/white"
+        app:titleTextColor="@color/black"
+        android:outlineAmbientShadowColor="@color/button"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        />
+
+    <!-- Your existing TextViews -->
+    <TextView
+        android:id="@+id/liveCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/startButton"
+        android:layout_centerHorizontal="true"
+        android:text="Live: 0"
+        android:layout_marginBottom="20dp"
+        android:drawableStart="@drawable/icon_live"
+        android:drawablePadding="8dp"
+        android:textSize="24sp"
+        android:textColor="@color/liveColor" />
+
+    <TextView
+        android:id="@+id/deadCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/liveCountTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Dead: 0"
+        android:drawableStart="@drawable/icon_death"
+        android:drawablePadding="8dp"
+        android:textSize="24sp"
+        android:textColor="@color/deadColor" />
+
+    <!-- Centered Grid -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnCount="10"
+        android:rowCount="10" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/startButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/stopButton"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:text="Restart" />
+
+    <Button
+        android:id="@+id/gitHub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/black"
+        android:drawableStart="@drawable/github"
+        android:drawableEnd="@drawable/code_solid__1_"
+        android:text="GitHub Code" />
+
+
+
+</RelativeLayout>
