@@ -55,3 +55,4 @@ To build the project locally, follow these instructions:
 ## Contributions
 
 Contributions are welcome! Feel free to create pull requests or raise issues for any improvements or bug fixes. Your valuable contributions to enhancing the application are highly appreciated.
+Aj Styles
